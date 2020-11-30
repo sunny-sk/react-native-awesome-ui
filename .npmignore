@@ -18,6 +18,8 @@ android
 android/
 ios
 ios/
+src
+src/
 
 node_modules
 

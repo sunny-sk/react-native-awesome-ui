@@ -1,0 +1,25 @@
+{
+  // Set the default
+  "editor.formatOnSave": true,
+  "editor.wordWrap": "on",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "[html]": {
+    "editor.formatOnSave": true
+  },
+
+  "editor.formatOnPaste": true,
+  "window.zoomLevel": 0,
+
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "editor.tabSize": 2,
+  "editor.useTabStops": false,
+  "typescript.updateImportsOnFileMove.enabled": "always"
+}

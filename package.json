@@ -1,7 +1,8 @@
 {
   "name": "react-native-ui",
   "version": "0.0.1",
-  "private": true,
+  "private": false,
+  "main": "index.js",
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
@@ -19,11 +20,37 @@
     "@react-native-community/eslint-config": "^1.1.0",
     "babel-jest": "^25.1.0",
     "eslint": "^6.5.1",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-prettier": "^3.1.4",
     "jest": "^25.1.0",
     "metro-react-native-babel-preset": "^0.59.0",
+    "prettier": "^2.2.1",
+    "react-native-vector-icons": "^7.1.0",
     "react-test-renderer": "16.13.1"
+  },
+  "peerDependencies": {
+    "react": ">=16.4.1",
+    "react-native": ">=0.56.0",
+    "react-native-vector-icons": ">=7.1.0"
   },
   "jest": {
     "preset": "react-native"
-  }
+  },
+  "description": "simple and fully customizable react-native components",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sunny-sk/react-native-ui.git"
+  },
+  "keywords": [
+    "recat-native",
+    "recat-native-components",
+    "react-native-ui"
+  ],
+  "author": "sunny",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sunny-sk/react-native-ui/issues"
+  },
+  "homepage": "https://github.com/sunny-sk/react-native-ui#readme"
 }
