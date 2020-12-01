@@ -4,11 +4,14 @@
   "private": false,
   "main": "index.js",
   "scripts": {
-    "android": "react-native run-android",
-    "ios": "react-native run-ios",
+    "install:debug": "npx react-native run-android",
     "start": "react-native start",
+    "ios": "react-native run-ios",
     "test": "jest",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "test:e2e": "",
+    "build": "",
+    "clear_jest": "jest --clearCache"
   },
   "dependencies": {
     "react": "16.13.1",
@@ -23,6 +26,7 @@
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^6.15.0",
     "eslint-plugin-prettier": "^3.1.4",
+    "husky": "^4.3.0",
     "jest": "^25.1.0",
     "metro-react-native-babel-preset": "^0.59.0",
     "prettier": "^2.2.1",
@@ -47,6 +51,11 @@
     "recat-native-components",
     "react-native-ui"
   ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
   "author": "sunny",
   "license": "ISC",
   "bugs": {
