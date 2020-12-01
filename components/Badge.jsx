@@ -1,6 +1,8 @@
-import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+/* eslint-disable react-native/no-inline-styles */
 import PropTypes from 'prop-types';
+import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
+
 import Colors from '../components/constants/Colors';
 
 /*
@@ -25,7 +27,11 @@ const Badge = ({
     <View
       style={[
         styles.badge,
-        type ? (type == 'pill' ? styles.pill : styles.default) : styles.default,
+        type
+          ? type === 'pill'
+            ? styles.pill
+            : styles.default
+          : styles.default,
         shadow ? styles.shadowStyle : null,
         {
           backgroundColor: bgColor || Colors.primary,

@@ -1,7 +1,7 @@
-import React from 'react';
-import {StyleSheet, View} from 'react-native';
 import PropTypes from 'prop-types';
-const Main = ({children, container, style: passedStyle, center}) => {
+import React from 'react';
+import { StyleSheet, View } from 'react-native';
+const Main = ({ children, container, style: passedStyle, center }) => {
   return (
     <View
       style={[

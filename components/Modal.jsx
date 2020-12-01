@@ -1,16 +1,11 @@
-import React, {ReactNode} from 'react';
-import {
-  Modal,
-  Pressable,
-  StyleSheet,
-  View,
-  Platform,
-  StatusBar,
-} from 'react-native';
+/* eslint-disable react-native/no-inline-styles */
 import PropTypes from 'prop-types';
-import Main from './Main';
-import Container from './Container';
+import React from 'react';
+import { Modal, Platform, Pressable, StatusBar, View } from 'react-native';
+
 import Colors from '../components/constants/Colors';
+import Container from './Container';
+import Main from './Main';
 
 /*
 it accepts container props
@@ -37,7 +32,7 @@ const Modals = ({
           <StatusBar backgroundColor={Colors.overlayMid} translucent={true} />
         ) : null}
         <Pressable
-          android_ripple={{color: Colors.overlayLight}}
+          android_ripple={{ color: Colors.overlayLight }}
           style={{
             flex: 1,
             // justifyContent: "center",
@@ -63,7 +58,7 @@ const Modals = ({
                 width: '100%',
               }}
               onPress={() => {}}>
-              <View style={{height: '100%', width: '100%'}}>{children}</View>
+              <View style={{ height: '100%', width: '100%' }}>{children}</View>
             </Pressable>
           </Container>
         </Pressable>
@@ -87,5 +82,3 @@ Main.defaultProps = {
   isVisible: false,
   transparent: true,
 };
-
-const styles = StyleSheet.create({});

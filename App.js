@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, AppRegistry} from 'react-native';
+import { AppRegistry, Text } from 'react-native';
 
 const App = () => {
   return (
@@ -9,6 +9,6 @@ const App = () => {
   );
 };
 
-import {name as appName} from './app.json';
+import { name as appName } from './app.json';
 
 AppRegistry.registerComponent(appName, () => App);

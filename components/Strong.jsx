@@ -1,9 +1,10 @@
-import React from 'react';
-import {Text} from 'react-native';
+/* eslint-disable react-native/no-inline-styles */
 import PropTypes from 'prop-types';
+import React from 'react';
+import { Text } from 'react-native';
 
-const Strong = ({children}) => (
-  <Text style={{fontWeight: 'bold'}}>
+const Strong = ({ children }) => (
+  <Text style={{ fontWeight: 'bold' }}>
     <>{children}</>
   </Text>
 );

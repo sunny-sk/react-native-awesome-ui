@@ -7,10 +7,11 @@
     "install:debug": "npx react-native run-android",
     "start": "react-native start",
     "ios": "react-native run-ios",
-    "test": "jest",
-    "lint": "eslint .",
+    "lint": "eslint . --ext .js,.jsx",
+    "lint:fix": "eslint . --fix",
     "test:e2e": "",
     "build": "",
+    "test": "jest --maxworker=50%",
     "clear_jest": "jest --clearCache"
   },
   "dependencies": {
@@ -19,15 +20,18 @@
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.12.7",
     "@babel/runtime": "^7.8.4",
     "@react-native-community/eslint-config": "^1.1.0",
-    "babel-jest": "^25.1.0",
+    "@testing-library/jest-native": "^3.4.3",
+    "@testing-library/react-native": "^7.1.0",
     "eslint": "^6.5.1",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^6.15.0",
     "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-simple-import-sort": "^6.0.1",
     "husky": "^4.3.0",
-    "jest": "^25.1.0",
+    "jest": "^26.6.3",
     "lint-staged": "^10.5.2",
     "metro-react-native-babel-preset": "^0.59.0",
     "prettier": "^2.2.1",
@@ -38,9 +42,6 @@
     "react": ">=16.4.1",
     "react-native": ">=0.56.0",
     "react-native-vector-icons": ">=7.1.0"
-  },
-  "jest": {
-    "preset": "react-native"
   },
   "description": "simple and fully customizable react-native components",
   "repository": {
@@ -54,7 +55,7 @@
   ],
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged && npm run test"
     }
   },
   "lint-staged": {

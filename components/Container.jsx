@@ -1,6 +1,8 @@
-import React from 'react';
-import {View, StyleSheet} from 'react-native';
+/* eslint-disable react-native/no-inline-styles */
 import PropTypes from 'prop-types';
+import React from 'react';
+import { StyleSheet, View } from 'react-native';
+
 import Colors from '../components/constants/Colors';
 
 /*
@@ -24,9 +26,8 @@ const Container = ({
         border ? styles.borderStyle : null,
         row ? styles.rowStyle : null,
         shadow ? styles.shadowStyle : null,
-        {borderRadius: borderShape === 'rounded' ? 10 : 0},
-        {...styles.defaultStyle, ...passedStyle},
-        ,
+        { borderRadius: borderShape === 'rounded' ? 10 : 0 },
+        { ...styles.defaultStyle, ...passedStyle },
       ]}>
       {children}
     </View>

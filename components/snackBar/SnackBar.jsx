@@ -1,20 +1,16 @@
-import React, { ReactNode, useRef, useState } from "react";
-import {
-  StyleSheet,
-  Text,
-  View,
-  Animated,
-  TouchableOpacity,
-} from "react-native";
-import Colors from "../../constants/Colors";
+/* eslint-disable react-native/no-inline-styles */
+import React, { useRef, useState } from 'react';
+import { Animated, Text, TouchableOpacity, View } from 'react-native';
 
-const SnackBar = (WrappedComponent: React.FC<ReactNode>) => {
-  function Hoc(props: any) {
+import Colors from '../../constants/Colors';
+
+const SnackBar = (WrappedComponent) => {
+  function Hoc(props) {
     const bottom = useRef(new Animated.Value(1000)).current;
-    const opacity = useRef(new Animated.Value(0)).current;
+    // const opacity = useRef(new Animated.Value(0)).current;
 
-    const [sType, setType] = useState("success");
-    const [sMessage, setMessage] = useState("message");
+    const [sType, setType] = useState('success');
+    const [sMessage, setMessage] = useState('message');
     const [sTimeout, setTimeOut] = useState(2000);
     const show = () => {
       Animated.spring(bottom, {
@@ -30,7 +26,7 @@ const SnackBar = (WrappedComponent: React.FC<ReactNode>) => {
       });
     };
 
-    const showMessage = (type: string, message: string, timeout: number) => {
+    const showMessage = (type, message, timeout) => {
       setType(type);
       setMessage(message);
       setTimeOut(timeout);
@@ -41,14 +37,14 @@ const SnackBar = (WrappedComponent: React.FC<ReactNode>) => {
         <WrappedComponent {...props} showMessage={showMessage} />
         <Animated.View
           style={{
-            position: "absolute",
+            position: 'absolute',
             bottom: 80,
-            width: "90%",
-            left: "5%",
+            width: '90%',
+            left: '5%',
             transform: [{ translateY: bottom }],
             backgroundColor:
-              sType === "success" ? Colors.danger : Colors.danger,
-            shadowColor: "#000",
+              sType === 'success' ? Colors.danger : Colors.danger,
+            shadowColor: '#000',
             shadowOffset: {
               width: 0,
               height: 2,
@@ -57,36 +53,31 @@ const SnackBar = (WrappedComponent: React.FC<ReactNode>) => {
             shadowRadius: 3.84,
 
             elevation: 5,
-          }}
-        >
+          }}>
           <View
             style={{
-              flexDirection: "row",
-            }}
-          >
+              flexDirection: 'row',
+            }}>
             <View
               style={{
-                width: "80%",
+                width: '80%',
                 paddingVertical: 10,
                 paddingHorizontal: 12,
-              }}
-            >
-              <Text style={{ color: "white" }}>{sMessage}</Text>
+              }}>
+              <Text style={{ color: 'white' }}>{sMessage}</Text>
             </View>
             <View
               style={{
-                width: "20%",
+                width: '20%',
                 paddingVertical: 10,
                 paddingHorizontal: 12,
-              }}
-            >
+              }}>
               <TouchableOpacity
-                style={{ height: "100%", width: "100%" }}
+                style={{ height: '100%', width: '100%' }}
                 onPress={() => {
-                  console.log("App -> onPress");
-                }}
-              >
-                <Text style={{ color: "white" }}>Close</Text>
+                  console.log('App -> onPress');
+                }}>
+                <Text style={{ color: 'white' }}>Close</Text>
               </TouchableOpacity>
             </View>
           </View>
@@ -98,5 +89,3 @@ const SnackBar = (WrappedComponent: React.FC<ReactNode>) => {
 };
 
 export default SnackBar;
-
-const styles = StyleSheet.create({});

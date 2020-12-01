@@ -1,7 +1,8 @@
 {
   "env": {
     "browser": true,
-    "es6": true
+    "es6": true,
+    "node": true
   },
   "root": true,
   "extends": [
@@ -17,13 +18,15 @@
     "ecmaVersion": 2020,
     "sourceType": "module"
   },
-  "plugins": ["react"],
+  "plugins": ["react", "simple-import-sort"],
   "rules": {
+    "sort-vars": "error",
     "semi": ["error", "always"],
     "quotes": ["error", "single"],
+    "simple-import-sort/imports": "error",
     "no-unused-vars": [
       "error",
-      {"vars": "all", "args": "after-used", "ignoreRestSiblings": false}
+      { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }
     ]
   }
 }

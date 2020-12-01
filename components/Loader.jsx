@@ -1,14 +1,15 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import {
-  View,
-  StyleSheet,
-  Modal,
   ActivityIndicator,
-  StatusBar,
-  Text,
+  Modal,
   Platform,
+  StatusBar,
+  StyleSheet,
+  Text,
+  View,
 } from 'react-native';
-import PropTypes from 'prop-types';
+
 import Colors from '../components/constants/Colors';
 
 /*
@@ -16,7 +17,7 @@ defaults
 showLoader = false
 */
 
-const Loader = ({color, showLoader = false, text}) => {
+const Loader = ({ color, showLoader = false, text }) => {
   return (
     <>
       <Modal animationType="fade" visible={showLoader} transparent={true}>
