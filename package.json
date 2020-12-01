@@ -28,6 +28,7 @@
     "eslint-plugin-prettier": "^3.1.4",
     "husky": "^4.3.0",
     "jest": "^25.1.0",
+    "lint-staged": "^10.5.2",
     "metro-react-native-babel-preset": "^0.59.0",
     "prettier": "^2.2.1",
     "react-native-vector-icons": "^7.1.0",
@@ -53,8 +54,13 @@
   ],
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint"
+      "pre-commit": "lint-staged"
     }
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "npm run lint"
+    ]
   },
   "author": "sunny",
   "license": "ISC",
