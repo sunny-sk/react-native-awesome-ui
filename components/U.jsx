@@ -17,7 +17,7 @@ U.propTypes = {
 export default U;
 
 const styles = StyleSheet.create({
-  textDecorationLine: 'underline',
+  style: { textDecorationLine: 'underline' },
 });
 
 /*
