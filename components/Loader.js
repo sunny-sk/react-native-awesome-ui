@@ -10,7 +10,7 @@ import {
   View,
 } from 'react-native';
 
-import Colors from '../components/constants/Colors';
+import Colors from './constants/Colors';
 
 /*
 defaults
