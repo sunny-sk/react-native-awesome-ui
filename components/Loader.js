@@ -11,30 +11,61 @@ import {
 } from 'react-native';
 
 import Colors from './constants/Colors';
+import Container from './Container';
 
 /*
 defaults
-showLoader = false
+isLoading = false
 */
 
-const Loader = ({ color, showLoader = false, text }) => {
+const Loader = ({
+  color,
+  isLoading = false,
+  text,
+  type = 'default',
+  size = 'large',
+  style: containerStyle,
+  textStyle,
+}) => {
   return (
     <>
-      <Modal animationType="fade" visible={showLoader} transparent={true}>
-        {Platform.OS === 'android' ? (
-          <StatusBar backgroundColor={Colors.overlayLight} translucent={true} />
-        ) : null}
-        <View style={styles.center}>
-          <View style={styles.container}>
-            <View style={styles.left}>
-              <ActivityIndicator size="large" color={color || Colors.primary} />
+      {type === 'full' ? (
+        <>
+          <Modal animationType="fade" visible={isLoading} transparent={true}>
+            {Platform.OS === 'android' ? (
+              <StatusBar
+                backgroundColor={Colors.overlayLight}
+                translucent={true}
+              />
+            ) : null}
+            <View style={styles.center}>
+              <Container
+                shadow
+                style={{ ...styles.container, ...containerStyle }}
+                row
+                borderShape="square">
+                <View style={styles.left}>
+                  <ActivityIndicator
+                    size={size}
+                    color={color || Colors.primary}
+                  />
+                </View>
+                <View style={styles.right}>
+                  <Text style={{ ...styles.text, ...textStyle }}>
+                    {text || 'Please wait...'}
+                  </Text>
+                </View>
+              </Container>
             </View>
-            <View style={styles.right}>
-              <Text style={styles.text}>{text || 'Please wait...'}</Text>
-            </View>
+          </Modal>
+        </>
+      ) : (
+        <>
+          <View>
+            <ActivityIndicator size={size} color={color || Colors.primary} />
           </View>
-        </View>
-      </Modal>
+        </>
+      )}
     </>
   );
 };
@@ -43,8 +74,11 @@ export default React.memo(Loader);
 
 Loader.propTypes = {
   color: PropTypes.string,
-  showLoader: PropTypes.bool,
+  isLoading: PropTypes.bool,
   text: PropTypes.string,
+  size: PropTypes.oneOf(['large', 'small']),
+  type: PropTypes.oneOf(['full', 'default']),
+  textStyle: PropTypes.object,
 };
 
 /*
@@ -58,10 +92,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   container: {
-    alignItems: 'center',
     backgroundColor: Colors.white,
-    flexDirection: 'row',
-    justifyContent: 'center',
     paddingVertical: 15,
     width: '90%',
   },

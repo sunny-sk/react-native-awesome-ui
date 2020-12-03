@@ -1,13 +1,18 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
-import { Text } from 'react-native';
 
-import { Container } from './';
+import { ErrorBoundry } from '.';
+import Screen1 from './screen/Screen1';
+
 const Test = () => {
+  const onError = async (errMsg) => {
+    //call Api with errMsg
+  };
   return (
     <>
-      <Container border>
-        <Text>Hello</Text>
-      </Container>
+      <ErrorBoundry onError={onError}>
+        <Screen1 />
+      </ErrorBoundry>
     </>
   );
 };

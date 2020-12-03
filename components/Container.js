@@ -13,7 +13,7 @@ borderShape = square
 const Container = ({
   children,
   row,
-  border,
+  border = true,
   shadow,
   borderShape,
   style: passedStyle,
