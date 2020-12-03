@@ -2,19 +2,19 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { StyleSheet, Text } from 'react-native';
 
-const U = ({ text }) => {
+const U = ({ children }) => {
   return (
     <Text style={styles.style}>
-      <>{text}</>
+      <>{children}</>
     </Text>
   );
 };
 
 U.propTypes = {
-  text: PropTypes.string,
+  children: PropTypes.any,
 };
 
-export default U;
+export default React.memo(U);
 
 const styles = StyleSheet.create({
   style: { textDecorationLine: 'underline' },

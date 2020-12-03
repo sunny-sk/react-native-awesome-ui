@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { Modal, Platform, Pressable, StatusBar, View } from 'react-native';
 
-import Colors from '../components/constants/Colors';
+import Colors from './constants/Colors';
 import Container from './Container';
 import Main from './Main';
 

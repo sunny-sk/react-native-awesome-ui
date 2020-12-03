@@ -7,8 +7,11 @@ const props = {
   text: 'this is text',
 };
 
-test('form submits two answers', () => {
-  const { queryByText } = render(<U {...props} />);
-  const text = queryByText('this is text');
-  expect(text).toBeTruthy();
+describe('<U></U>', () => {
+  test('should render text successfully', async () => {
+    const { queryByText } = render(<U>{props.text}</U>);
+    const text = queryByText('this is text');
+    expect(text).toBeTruthy();
+  });
+  //TODO : check for underline property
 });

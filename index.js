@@ -1,4 +1,5 @@
 import Container from './components/Container';
+import ErrorBoundry from './components/ErrorBoundry';
 import I from './components/I';
 import Loader from './components/Loader';
 import Main from './components/Main';
@@ -8,4 +9,4 @@ import U from './components/U';
 // import useSnack from './snackBar/useSnack';
 // import SnackBarContext from './snackBar/SnackBarContext';
 // import SnackBar from './snackBar/SnackBar';
-export { Container, Loader, Strong, I, U, Main, Modal };
+export { Container, Loader, Strong, I, U, Main, Modal, ErrorBoundry };

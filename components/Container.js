@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 
-import Colors from '../components/constants/Colors';
+import Colors from './constants/Colors';
 
 /*
 defaults
@@ -13,7 +13,7 @@ borderShape = square
 const Container = ({
   children,
   row,
-  border,
+  border = true,
   shadow,
   borderShape,
   style: passedStyle,
