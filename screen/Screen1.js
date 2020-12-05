@@ -1,9 +1,9 @@
 /* eslint-disable react-native/no-inline-styles */
 import React, { useEffect } from 'react';
-import { Text, View } from 'react-native';
+import { View } from 'react-native';
 import RNOtpVerify from 'react-native-otp-verify';
 
-import { Container } from '..';
+import { Button } from '..';
 
 const Screen1 = () => {
   useEffect(() => {
@@ -39,14 +39,25 @@ const Screen1 = () => {
           flex: 1,
           justifyContent: 'center',
           alignItems: 'center',
+          paddingHorizontal: 10,
         }}>
-        <Container
+        {/* <Container
           style={{ width: '90%' }}
-          shadow
+          // shadow
           border={false}
           borderShape="square">
           <Text>sunny</Text>
-        </Container>
+        </Container> */}
+        <Button
+          isLoading={true}
+          loaderType="inside"
+          // disabled
+          variant="success"
+          title="SUBMIT"
+          onPress={() => {
+            console.log('clicked');
+          }}
+        />
       </View>
     </>
   );
