@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import { View } from 'react-native';
 import RNOtpVerify from 'react-native-otp-verify';
 
-import { Button } from '..';
+import { Button, Rating } from '..';
 
 const Screen1 = () => {
   useEffect(() => {
@@ -58,6 +58,7 @@ const Screen1 = () => {
             console.log('clicked');
           }}
         />
+        <Rating />
       </View>
     </>
   );
