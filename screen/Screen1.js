@@ -1,12 +1,14 @@
 /* eslint-disable no-undef */
 /* eslint-disable react-native/no-inline-styles */
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { View } from 'react-native';
 import RNOtpVerify from 'react-native-otp-verify';
 
 import { Button } from '..';
+import Alert from '../components/Alert';
 
 const Screen1 = () => {
+  const [visible, setVisible] = useState(false);
   useEffect(() => {
     // docs: https://github.com/faizalshap/react-native-otp-verify
 
@@ -55,8 +57,21 @@ const Screen1 = () => {
           variant="primary"
           title="SUBMIT"
           onPress={() => {
-            console.log('clicked');
+            setVisible(true);
           }}
+        />
+        <Alert
+          onClose={() => {
+            setVisible(false);
+          }}
+          onRequestClose={() => {
+            setVisible(false);
+          }}
+          onRetry={() => {}}
+          visible={visible}
+          type="success"
+          title="success"
+          message="this is success this is success this is success this is success"
         />
       </View>
     </>

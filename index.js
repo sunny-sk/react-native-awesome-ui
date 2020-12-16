@@ -1,3 +1,4 @@
+import Alert from './components/Alert';
 import Button from './components/Button';
 import Container from './components/Container';
 import ErrorBoundry from './components/ErrorBoundry';
@@ -22,4 +23,5 @@ export {
   ErrorBoundry,
   Button,
   Rating,
+  Alert,
 };

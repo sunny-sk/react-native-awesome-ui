@@ -4,6 +4,7 @@ const VARIANTS = {
   DANGER: 'danger',
   DARK: 'dark',
   SUCCESS: 'success',
+  INFO: 'info',
 };
 
 export { VARIANTS };

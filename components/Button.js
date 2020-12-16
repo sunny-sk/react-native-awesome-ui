@@ -147,7 +147,7 @@ import {
 
 import { VARIANTS } from '../components/constants/Constants';
 import Colors from './constants/Colors';
-const { PRIMARY, DANGER, SUCCESS, DARK } = VARIANTS;
+const { PRIMARY, DANGER, SUCCESS, DARK, INFO } = VARIANTS;
 const Button = ({
   variant = PRIMARY,
   title,
@@ -192,12 +192,13 @@ const Button = ({
         style={[
           { ...styles.btnCon },
           { opacity: disabled ? 0.8 : 1 },
-          { ...btnStyle },
           variant === PRIMARY && { ...styles.primary },
           variant === DANGER && { ...styles.danger },
           variant === DARK && { ...styles.dark },
           variant === SUCCESS && { ...styles.success },
+          variant === INFO && { ...styles.info },
           { transform: [{ scale: value }] },
+          { ...btnStyle },
         ]}>
         <Text
           style={{
@@ -232,7 +233,9 @@ const styles = StyleSheet.create({
   primary: {
     backgroundColor: Colors.primaryDark,
   },
-
+  info: {
+    backgroundColor: Colors.primaryDark,
+  },
   success: {
     backgroundColor: Colors.success,
   },
