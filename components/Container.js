@@ -54,7 +54,6 @@ const styles = StyleSheet.create({
   defaultStyle: {
     width: '100%',
     overflow: 'hidden',
-    flexWrap: 'wrap',
     padding: 15,
     backgroundColor: Colors.white,
   },

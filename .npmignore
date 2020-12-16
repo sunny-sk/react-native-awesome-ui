@@ -1,19 +1,27 @@
 _tests_
 .vscode
-.eslintrc.js
+.eslintrc.json
+.eslintignore
 .flowconfig
 .gitattributes
 .git
 .npmignore
-.prettierrc.js
+.prettierrc
 .watchmanconfig
 .buckconfig
 .nvmrc
 
 App.js
 bable.config.js
+jest.config.json
 index.android.js
 metro.config.js
+jsconfig.json
+app.json
+bable.config.json
+__test__
+components/__test__
+test.js
 
 android
 android/
@@ -21,6 +29,7 @@ ios
 ios/
 src
 src/
+
 
 node_modules
 node_modules/
