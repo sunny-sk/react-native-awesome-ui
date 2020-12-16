@@ -1,6 +1,6 @@
 {
   "name": "react-native-awesome-ui",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "private": false,
   "main": "index.js",
   "scripts": {
@@ -9,14 +9,14 @@
     "ios": "react-native run-ios",
     "lint": "eslint . --ext .js,.jsx",
     "lint:fix": "eslint . --fix",
-    "test:e2e": "",
-    "build": "",
     "test": "jest --maxworker=50%",
-    "clear_jest": "jest --clearCache"
+    "clear_jest": "jest --clearCache",
+    "npm:publish": "npm publish"
   },
   "dependencies": {
     "react": "16.13.1",
-    "react-native": "0.63.3"
+    "react-native": "0.63.3",
+    "react-native-vector-icons": "^7.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",
@@ -35,13 +35,12 @@
     "lint-staged": "^10.5.2",
     "metro-react-native-babel-preset": "^0.59.0",
     "prettier": "^2.2.1",
-    "react-native-vector-icons": "^7.1.0",
+    "react-native-otp-verify": "^1.0.3",
     "react-test-renderer": "16.13.1"
   },
   "peerDependencies": {
     "react": ">=16.4.1",
-    "react-native": ">=0.56.0",
-    "react-native-vector-icons": ">=7.1.0"
+    "react-native": ">=0.56.0"
   },
   "description": "simple and fully customizable react-native components",
   "repository": {

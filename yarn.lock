@@ -6188,6 +6188,11 @@ react-is@^17.0.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-17.0.1.tgz#5b3531bd76a645a4c9fb6e693ed36419e3301339"
   integrity sha512-NAnt2iGDXohE5LI7uBnLnqvLQMtzhkiAOLXTmv+qnF9Ky7xAPcX8Up/xWIhxvLVGJvuLiNc4xQLtuqDRzb4fSA==
 
+react-native-otp-verify@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/react-native-otp-verify/-/react-native-otp-verify-1.0.3.tgz#a205521bf19f1e448e563ddfa462559469fa8662"
+  integrity sha512-BIKP89H5a6ItAcRXJBxQkc2uzA4jazaEHTRWZxqnUUb6njHKHOevKrtzfhUOoAXQGq3evCRldEot5EaNWTDq9g==
+
 react-native-vector-icons@^7.1.0:
   version "7.1.0"
   resolved "https://registry.yarnpkg.com/react-native-vector-icons/-/react-native-vector-icons-7.1.0.tgz#145487d617b2a81d395d2cf64e6e065fcab3a454"
